@@ -1,9 +1,12 @@
 .container{
     margin-left: 10%;
     margin-right: 10%;
-    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 img{
     max-width: 100%;
     height: auto;
+    margin-bottom: 2%;
 }
