@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Color Picker</title>
+    
 </head>
 <body>
     <div class="container">
         <img src="/image.jpg" alt="">
     </div>
-    
+    <button>
+        Pick the Color
+    </button>
+    <h3></h3>
+    <script>
+        const button = document.querySelector("button");
+        const h3 = document.querySelector("h3");
+
+        const pickColor = async () => {
+            const eyeDropper = new EyeDropper();
+            const {sRGBHex} = await eyeDropper.open();
+            h3.innerHTML = sRGBHex;
+            h3.style.color = sRGBHex;
+        }
+        button.addEventListener("click",pickColor);
+    </script>
 </body>
 </html>
