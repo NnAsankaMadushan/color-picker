@@ -1,7 +1,7 @@
 .container{
     margin-left: 10%;
     margin-right: 10%;
-
+    align-items: center;
 }
 img{
     max-width: 100%;
